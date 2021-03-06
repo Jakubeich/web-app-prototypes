@@ -1,0 +1,40 @@
+<!doctype html>
+	<head>
+		<style>
+			body {
+			    padding:20px;
+			}
+			input {
+			    padding:5px;
+			    background-color:transparent;
+			    border:none;
+			    border-bottom:solid 4px #43169c;
+			    width:250px;
+			    font-size:16px;
+			}
+			
+			.qr-btn {
+			    background-color:#43169c;
+			    padding:8px;
+			    color:white;
+			    cursor:pointer;
+			}
+		</style>
+		
+		<title>QR Generátor</title>
+	</head>
+	<body>
+		<h3>QR kód generátor</h3>
+        <div><input id="qr-text" type="text" placeholder="Text pro generování QR kódu"/></div>
+        <br/>
+        <div>
+            <button class="qr-btn" onclick="generateQRCode()">Vytvořit QR kód</button>
+        </div>
+        <br/>
+        <p id="qr-result">Toto je defaultní QR kód:</p>
+        <canvas id="qr-code"></canvas>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+		<script src="QRGenerator.js"></script>
+	</body>
+</html>
