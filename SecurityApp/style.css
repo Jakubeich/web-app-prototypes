@@ -1,0 +1,83 @@
+body {
+    background-color: #ffffff;
+}
+.f15pt {
+    font-size: 15pt;
+}
+.content {
+    background: #610bb1;
+    padding: 10px;
+    font-size: 15pt;
+    color: #fefefe;
+    width: 100%;
+}
+.voilet0 {
+    background-color: #333;
+    width: 98%;
+}
+.voilet1 {
+    background-color: rgb(130, 130, 130);
+}
+.voilet2 {
+    background-color: #333;
+    width: 98%;
+}
+textarea {
+    width: 100%;
+    min-height: 100px;
+}
+.encrypt {
+    font-size: 24pt;
+    background-color: rgb(255, 255, 255);
+    border-radius: 3px;
+    border: 1px solid #8b8b8b;
+    color: #000000;
+    padding: 8px;
+    margin: 20px;
+    float: right;
+}
+.center {
+    width: 70%;
+    margin: auto;
+}
+#passcode .hideShowBtn{
+    border-radius: 3px;
+    padding: 6px;
+    border: 0px;
+    outline: none;
+    margin: 0 0 10px;
+}
+#passcode:focus {
+    border: 2px solid #000000;
+}
+.top-relative {
+    top: 50px;
+    position: relative;
+}
+.top-bar {
+    width: 100%;
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    background-color: #fefefe;
+padding: 0px;
+box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+}
+.ablock {
+text-decoration: none;
+    font-size: 15pt;
+}
+.h35px {
+height: 35px;
+}
+.txtbld {
+    font-weight: bold;
+}
+.prb12px {
+position: relative;
+bottom: 10px;
+}
+.w35px {
+width: 35px;
+}

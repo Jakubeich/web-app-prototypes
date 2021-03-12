@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="style.css" rel="stylesheet">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <div class="center top-relative">
+            <div class="content voilet1">
+                <span>Zadej heslo pro šifrování</span>
+                <input class="f15pt" type="password" id="passcode" placeholder="heslo" />   
+                <div class="content voilet2">
+                    <span>Sem vlož/zadej text</span>
+                    <textarea id="originalContent"></textarea>
+                </div>
+                <div class="content voilet0">
+                    <span>Šifrovaná forma</span>
+                    <textarea id="encryptedContent" readonly></textarea>
+                </div>
+                <div class="content voilet0">
+                    <span>Dešifrovaná forma</span>
+                    <textarea id="decryptedContent" readonly></textarea>
+                </div>
+                <button class="encrypt" onclick="webdevencrypt.setEncrypt('originalContent','encryptedContent','passcode')">Šifrovat</button>
+                <button class="encrypt" onclick="webdevencrypt.setDecrypt('originalContent','decryptedContent','passcode')">Dešifrovat</button>
+            </div>
+        </body>
+</html>
