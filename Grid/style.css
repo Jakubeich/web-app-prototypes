@@ -1,0 +1,13 @@
+body {
+    background: rgb(163, 163, 163);
+    color: #f8f8f8;
+  }
+  
+  canvas {
+    background: #f8f8f8;
+    padding: 0;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    display: block;
+    border: 3px solid #000000;
+  }
