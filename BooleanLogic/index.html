@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<head>
+<style>
+    #boolean{
+        display: block; 
+        width: 86vw; 
+        max-width: 1120px; 
+        margin: auto; 
+        text-align: center
+    }
+    #operator{
+        display: inline; 
+        float: left; width: 6.3vw; 
+        max-width: 80px;
+        float: left; 
+        background: transparent; 
+        border: 0; 
+        font-size: min(2.5vw,30px); 
+        text-align: center; 
+        margin: min(65px,5.5vw) min(30px,3vw);
+    }
+    #operator:focus{
+        font-size: min(2.5vw,30px); 
+        padding-top: min(1vw,10px);
+    }
+    #equal{
+        display: inline; 
+        float: left; 
+        width: min(3vw,36px); 
+        font-size: min(4.5vw,60px); 
+        margin: min(55px,5.5vw) min(50px,3vw);
+    }
+    .bulb{
+        display: inline; 
+        float: left; 
+        background-image:url(graphics/bulb_off.png); 
+        background-size: 100%; 
+        width: 5vw; 
+        max-width: 60px; 
+        height: 8.4vw; 
+        max-height: 100px; 
+        margin-top: min(25px,2.5vw)
+    }
+    .switch	{
+        display: inline; 
+        float: left; 
+        background-image:url(graphics/switch_off.png); 
+        background-size: 100%; 
+        width: 8vw; 
+        max-width: 90px; 
+        height: 8vw; 
+        max-height: 90px; 
+        margin: min(40px,4vw) min(5px,1vw) min(50px,5vw) min(5px,1vw)
+        }
+</style>
+</head>
+<body>
+    <div id="boolean">
+        <div id="0" class="switch" onClick="toggle_switch(0);"></div> 
+            <select id="operator" onChange="show_result();">
+            <option value="AND">AND</option>
+            <option value="OR"> OR</option>
+            <option value="EOR">EOR</option>
+            <option value="NOT">NOT</option>
+            </select> 
+        <div id="1" class="switch" onClick="toggle_switch(1);"></div> 
+        <div id="equal"> = </div> 
+        <div id="result" class="bulb"></div>
+    </div>
+    <script>
+            var bit = new Array(2);
+            bit[0] = false;
+            bit[1] = false;
+            var bit_display = new Array(2);
+            var switch_display = new Array(2);
+            var image_c1 = new Image();
+            image_c1.src = "graphics/bulb_on.png";
+            var image_c2 = new Image();
+            image_c2.src = "graphics/switch_on.png";
+            bit_display[false] = "url(graphics/bulb_off.png)";
+            bit_display[true] = "url(graphics/bulb_on.png)";
+            switch_display[false] = "url(graphics/switch_off.png)";
+            switch_display[true] = "url(graphics/switch_on.png)";
+
+            function toggle_switch(switch_no)
+            {
+                document.getElementById(switch_no).style.backgroundImage = switch_display[bit[switch_no] = !bit[switch_no]];
+                show_result();
+            }
+            function show_result()
+            {
+                if(document.getElementById("operator").value == "NOT")
+                {
+                    document.getElementById("0").style.backgroundImage = "none";
+                }
+                else
+                {
+                    document.getElementById("0").style.backgroundImage = switch_display[bit[0]];
+                }
+                switch(document.getElementById("operator").value)
+                {
+                    case "AND":
+                    document.getElementById("result").style.backgroundImage = bit_display[bit[0] && bit[1]];
+                    break;
+                    case "OR":
+                    document.getElementById("result").style.backgroundImage = bit_display[bit[0] || bit[1]];
+                    break;
+                    case "EOR":
+                    document.getElementById("result").style.backgroundImage = bit_display[bit[0] != bit[1]];
+                    break;
+                    default:
+                    document.getElementById("result").style.backgroundImage = bit_display[!bit[1]];
+                }
+            }
+    </script>
+</body>
