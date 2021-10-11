@@ -1,0 +1,41 @@
+#operator{
+    display: inline; 
+    float: left; 
+    width: 7vw; 
+    max-width: 100px;
+    float: left; 
+    background: transparent; 
+    border: 0; 
+    font-size: min(2.5vw,30px); 
+    text-align: center; 
+    margin: min(70px,6vw) min(30px,3vw);
+}
+#equal{
+    display: inline; 
+    float: left; 
+    width: min(3vw,36px); 
+    font-size: min(4.5vw,60px); 
+    margin: min(55px,5.5vw) min(50px,3vw);
+}
+.bulb{
+    display: inline; 
+    float: left; 
+    background-image:url(graphics/bulb_off.png); 
+    background-size: 100%; 
+    width: 5vw; 
+    max-width: 60px; 
+    height: 8.4vw; 
+    max-height: 100px; 
+    margin-top: min(25px,2.5vw)
+}
+.switch	{
+    display: inline; 
+    float: left; 
+    background-image:url(graphics/switch_off.png); 
+    background-size: 100%; 
+    width: 8vw; 
+    max-width: 90px; 
+    height: 8vw; 
+    max-height: 90px; 
+    margin: min(40px,4vw) min(5px,1vw) min(50px,5vw) min(5px,1vw)
+    }
