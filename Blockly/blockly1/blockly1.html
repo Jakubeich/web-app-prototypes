@@ -1,0 +1,111 @@
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blockly 1</title>
+    <script src="blockly1.js"></script>
+    <script src=""></script>
+</head>
+
+<body>
+    <p>
+        <button id="showJs" class="main-btn" style="background-color: cornflowerblue;" onclick="showJsCode()">Zobrazit JavaScript</button>
+        <button id="runJs" class="main-btn" style="background-color: cornflowerblue;" onclick="runJsCode()">Spustit JavaScript</button>
+
+        <br>
+
+        <button id="showPy" class="main-btn" style="background-color: cornflowerblue;" onclick="showPyCode()">Zobrazit Python</button>
+        <button id="runPy" class="main-btn" style="background-color: cornflowerblue;" onclick="runPyCode()">Spustit Python</button>
+    </p>
+
+    <div class="row">
+        <div id="blocklyDiv" style="height: 500px; width: 700px;"></div>
+        <!--Dodělat funkci show code kde se kod zobrazi v output textarea-->
+        <!--<textarea id="codeOutput" cols="30" rows="10" style="height: 500px; width: 700px;"></textarea>-->
+    </div>
+
+    <xml id="toolbox" style="display: none">
+        <category name="Logic" colour="210">
+            <block type="controls_if"></block>
+            <block type="logic_compare"></block>
+            <block type="logic_operation"></block>
+            <block type="logic_negate"></block>
+            <block type="logic_boolean"></block>
+        </category>
+        <category name="Loops" colour="120">
+            <block type="controls_repeat_ext">
+                <value name="TIMES">
+                    <block type="math_number">
+                        <field name="NUM">10</field>
+                    </block>
+                </value>
+            </block>
+            <block type="controls_whileUntil"></block>
+        </category>
+        <category name="Math" colour="230">
+            <block type="math_number">
+                <field name="NUM">123</field>
+            </block>
+            <block type="math_arithmetic"></block>
+            <block type="math_single"></block>
+        </category>
+        <category name="Text" colour="150">
+            <block type="text"></block>
+            <block type="text_length"></block>
+            <block type="text_print"></block>
+        </category>
+    </xml>
+
+    <xml id="startBlocks" style="display: none">
+        <block type="controls_if" inline="false" x="20" y="20">
+            <mutation else="1"></mutation>
+            <value name="IF0">
+                <block type="logic_compare" inline="true">
+                    <field name="OP">EQ</field>
+                    <value name="A">
+                        <block type="math_arithmetic" inline="true">
+                            <field name="OP">MULTIPLY</field>
+                            <value name="A">
+                                <block type="math_number">
+                                    <field name="NUM">3</field>
+                                </block>
+                            </value>
+                            <value name="B">
+                                <block type="math_number">
+                                    <field name="NUM">3</field>
+                                </block>
+                            </value>
+                        </block>
+                    </value>
+                    <value name="B">
+                        <block type="math_number">
+                            <field name="NUM">9</field>
+                        </block>
+                    </value>
+                </block>
+            </value>
+            <statement name="DO0">
+                <block type="text_print" inline="false">
+                    <value name="TEXT">
+                        <block type="text">
+                            <field name="TEXT">Správně</field>
+                        </block>
+                    </value>
+                </block>
+            </statement>
+            <statement name="ELSE">
+                <block type="text_print" inline="false">
+                    <value name="TEXT">
+                        <block type="text">
+                            <field name="TEXT">Špatně</field>
+                        </block>
+                    </value>
+                </block>
+            </statement>
+        </block>
+    </xml>
+</body>
+
+</html>
