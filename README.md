@@ -9,4 +9,5 @@ Grid\
 PaintApp\
 QR Generator\
 Random Password Generator\
-SecurityApp (encryption and decryption application)
+SecurityApp (encryption and decryption application)\
+Blockly modules (modules for block programming examples)
