@@ -1,5 +1,5 @@
 # WebAppPrototypes
-Small easy web application for RVP Informatika or for training programming in js. Everything is created in js, css and html.
+Small easy web application or modules for training programming in js. Everything is created in js, css and html.
 
 ## Applications
 Colored Animation\
